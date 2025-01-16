@@ -2,7 +2,7 @@
 
 🖥️ Ready to build a full stack crypto marketplace from scratch? Join us in this exciting tutorial where we create a feature-rich crypto marketplace using Vanilla JavaScript! 🚀✨ Perfect for developers looking to enhance their full stack skills and build a dynamic web application. 
 Throughout this video, we will guide you step-by-step through the process of building a full-stack web application using vanilla javascript.😉
-([Open Video in Youtube](https://youtu.be/LlhTafcDCuU))
+([Open Video in Youtube]
 
 Features of final project:
 

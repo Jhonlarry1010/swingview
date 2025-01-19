@@ -1006,12 +1006,12 @@ footer .social-icons a i,
     }
 
     .chart-container{
-        height: 80vh;
+        height: 90vh;
     }
 
     .search-container .item:nth-child(1),
     .search-container .item:nth-child(2){
-        width: 100%;
+        width: 80%;
     }
 
     .search-container .item:not(:first-child) h4{

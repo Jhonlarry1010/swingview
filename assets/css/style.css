@@ -212,7 +212,7 @@ nav .right-section .search{
     background: var(--background-color-secondary);
     padding: 0 10px;
     border-radius: 12px;
-    width: 100%;
+    width: 80%;
 }
 
 nav .right-section .search input{
@@ -274,7 +274,7 @@ nav .right-section > i.ri-moon-line{
 .trending table,
 .tab-container .tab-content table,
 .search-container .item table {
-    width: 100%;
+    width: 80%;
     border-spacing: 0 20px;
 }
 

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  code-server:
+    build: .
+    container_name: swingview-code-server
+    ports:
+      - "8443:8443"
+      - "5000:5000"
+    environment:
+      - PASSWORD=${CODE_SERVER_PASSWORD:-swingview123}
+      - SUDO_PASSWORD=${CODE_SERVER_PASSWORD:-swingview123}
+    volumes:
+      - ./:/home/coder/project
+      - code-server-data:/home/coder/.local
+    restart: unless-stopped
+    networks:
+      - swingview-network
+
+  # Optional: Python Flask backend service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: swingview-api
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=scripts/app.py
+    volumes:
+      - ./scripts:/home/app/scripts
+    restart: unless-stopped
+    networks:
+      - swingview-network
+    depends_on:
+      - code-server
+
+volumes:
+  code-server-data:
+
+networks:
+  swingview-network:
+    driver: bridge
